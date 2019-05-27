@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function parse(data)
+        {
+            let res = [];
+            data.split('').reduce((cur,s) => {
+                if(s === 'i') cur++;
+                if(s === 'd') cur++;
+                if(s === 's') cur = Math.pow(cur,2);
+                if(s === 'd') res.push(cur);
+                return cur;
+            },0);
+            return res;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
